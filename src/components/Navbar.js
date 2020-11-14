@@ -9,7 +9,7 @@ function Navbar() {
     }
 
     return (
-        <div className={state.customColor && 'customBackground'}>
+        <div style={{backgroundColor: state.customColor ? 'Red' : 'Blue'}}>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <Link to="/">
                 <a class="navbar-brand">Pokemon App </a>

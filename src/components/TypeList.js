@@ -1,4 +1,5 @@
-import React, {Component, useState, useEffect} from 'react'
+import React, { Component, useState, useEffect } from 'react'
+import {Link} from 'react-router-dom'
 
 function TypeList()  {
 
@@ -18,7 +19,9 @@ function TypeList()  {
                 <div>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href={type.url}>{type.name}</a>
+                            <Link to={{ pathname:"/types/Details", data: type.url }}>
+                                {type.name}
+                            </Link>
                         </li>
                     </ul>
                 </div>

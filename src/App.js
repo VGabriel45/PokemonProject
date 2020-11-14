@@ -6,6 +6,7 @@ import Home from './components/Home'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import PokemonList from './components/PokemonList';
 import PokemonDetail from './components/PokemonDetail';
+import TypeDetails from './components/TypeDetails';
 
 
 function App() {
@@ -16,8 +17,9 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/pokemons" component={PokemonList} />
-          <Route path="/types" component={TypeList} />
-          <Route path="/pokemonDetails" component={PokemonDetail}/>
+          <Route path="/types" exact component={TypeList} />
+          <Route path="/pokemonDetails" component={PokemonDetail} />
+          <Route path="/types/Details" component={TypeDetails} />
         </Switch>
       </div>
     </Router>
